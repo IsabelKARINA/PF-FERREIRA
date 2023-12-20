@@ -1,0 +1,58 @@
+/*mq de tablet*/
+@media screen and (min-width: 320px){
+    header{
+        background-color:aquamarine;  
+        flex-direction: row;
+    
+        .Logo{
+            border-style: dashed;
+            background-image: url(../Img/img-oveja-header.jpg);
+            color: blue;
+        
+            h1{
+                color:rgb(13, 10, 12);
+                font-size: 4rem;
+            }
+        }
+    }
+    main .Nuestro-sueño{
+        row-gap: 5%;
+        font-size: 130%;
+    
+        .parrafo{
+            font-size: 100%;
+        }
+        img{
+            grid-row:span 2; 
+            object-fit: cover; 
+         }
+    }
+    footer{
+        margin-bottom: 0.5rem;
+    }
+}
+
+/*mq de DESKTOP*/
+@media screen and (min-width: 1024px){
+    header{
+        background-color:rgb(222, 145, 207);  
+        flex-direction: row;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows:2rem 5rem;
+        row-gap: 10%;
+    
+        .Nuestro-sueño{
+            font-size: 150%;
+            .parrafo{
+                font-size: 150%;
+            }
+        img{
+            grid-row:span 2;
+            object-fit: cover; 
+            }
+        }
+    }
+}

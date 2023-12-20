@@ -1,0 +1,157 @@
+//comentario en sass
+/*comentario en Sass y Css*/
+//nesting
+
+@import "secundario/mediaquery";
+@import "secundario/mixin.scss";
+@import "secundario/formularioContacto";
+@import "secundario/extend";
+@import "secundario/variables";
+
+*{
+    @include pad-marg(0px, 0px);
+    box-sizing: border-box; 
+}
+
+/*BODY*/
+.FONDO {
+    background-color:beige;
+    background-image:url(../Img/img-fondo.webp);
+    background-attachment: fixed;
+}   
+
+header{
+        .Logo{     
+            @include flex;
+            @include pad-marg(30px, 50px);
+            border-style: double;
+            justify-content: center; 
+            align-items: center;
+            background-color:aquamarine;                   
+           
+            h1{
+                /*Estilo titulo de cabecera*/ 
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 200%;
+                    font-style:italic;
+                    text-align: justify;
+                    color:black;
+                
+            }
+        }
+    .VOLVER{ 
+             /*seccion navegable*/
+        @include flex;
+        @include pad-marg(10px, 50px);
+        border-style: groove;
+        border-color: rgb(111, 71, 255);
+        background-color: bisque;
+        justify-content: center;
+        
+       nav ul{
+            list-style: none;
+            @include flex;
+            gap: 30px;
+            font-weight:bolder;
+            font-size:20px;
+       }     
+        nav ul a:hover{
+            background: greenyellow; 
+            color:blue;
+            text-decoration: wavy;
+            cursor:pointer;
+        }
+    }
+}
+/*MAIN*/
+main{
+    margin: 50px;
+
+    .Nuestro-sueño{  
+        height: 40vh;
+        display: grid;
+        grid-template-areas: /*con esta propiedad defino el área en donde estarán los elementos*/
+        "nuestro-sueño-titulo" /*todas son de una fila*/
+        "nuestro-sueño-parrafo-1"
+        "nuestro-sueño-parrafo-2"
+        "nuestro-sueño-parrafo-3"
+        "nuestro-sueño-imagen";        ;
+        grid-template-columns: 1fr; /*con esto le doy ancho a las columnas*/
+        grid-template-rows: 20% repeat(3,10%) 0.2fr; /*con esto le doy alto a las filas*/
+        row-gap: 1%;
+        justify-content: center;
+        align-items: center;    
+            h2{
+                grid-area: nuestro-sueño-titulo;
+                @include texto;  
+                text-decoration: underline; 
+                font-size: 200%;
+                font-weight: 700; /*grosor de la letra*/   
+            }
+
+           .parrafo{ /*con esta doble clase hago que todos los párrafos tengan el mismo estilo, sin pisar lo que ocupan del área*/
+                @include texto;   
+                font-weight: bold;
+            }
+            .parrafo-1{
+                grid-area: nuestro-sueño-parrafo-1;
+            }
+            .parrafo-2{
+                grid-area: nuestro-sueño-parrafo-2;
+            }
+            .parrafo-3{
+                grid-area: nuestro-sueño-parrafo-3;
+            }
+                       
+            img{
+                grid-area: nuestro-sueño-imagen;
+                border-width: 30px;
+                width: $medida-1;
+                height: $medida-1;
+                object-fit: cover;
+    }
+}
+
+
+
+
+  
+    
+}
+
+/*PAGINA PRODUCTOS*/
+main h3{ /*estilo para el "Cómprame"*/
+    font-size: $medida-2;
+    font-style: oblique;
+    color: yellowgreen;
+    text-align: center;
+    background-color:darkgreen;
+  
+
+}
+main div .carousel-inner h5{
+    color:black;
+    font-size: 70px;
+    font-weight: 500;
+    background-color: aquamarine;
+}
+
+/*para todas las paginas en construcción*/
+.construcción{
+    background-color: deeppink;
+}
+.Redes{
+    text-align:center;
+}
+
+.Volver-arriba{
+    text-align: right;
+    margin-right: 20px;
+      
+}
+footer {    
+        
+    background-color: rgb(212, 177, 244);
+    
+    
+}

@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/*comentario en Sass y Css*/
+/*mq de tablet*/
+@media screen and (min-width: 320px) {
+  header {
+    background-color: aquamarine;
+    flex-direction: row; }
+    header .Logo {
+      border-style: dashed;
+      background-image: url(../Img/img-oveja-header.jpg);
+      color: blue; }
+      header .Logo h1 {
+        color: #0d0a0c;
+        font-size: 4rem; }
+  main .Nuestro-sueño {
+    row-gap: 5%;
+    font-size: 130%; }
+    main .Nuestro-sueño .parrafo {
+      font-size: 100%; }
+    main .Nuestro-sueño img {
+      grid-row: span 2;
+      object-fit: cover; }
+  footer {
+    margin-bottom: 0.5rem; } }
+
+/*mq de DESKTOP*/
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: #de91cf;
+    flex-direction: row; }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 5rem;
+    row-gap: 10%; }
+    main .Nuestro-sueño {
+      font-size: 150%; }
+      main .Nuestro-sueño .parrafo {
+        font-size: 150%; }
+      main .Nuestro-sueño img {
+        grid-row: span 2;
+        object-fit: cover; } }
+
+/*PAGINA CONTACTO*/
+form {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  justify-content: center; }
+  form ul li {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    gap: 10px; }
+    form ul li textarea {
+      width: 500px;
+      height: 100px;
+      resize: none; }
+
+.Datos {
+  background-color: antiquewhite; }
+
+.Boton-Enviar {
+  color: #00ff2a;
+  background-color: blue;
+  cursor: pointer;
+  float: right;
+  margin: 10px; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+/*BODY*/
+.FONDO {
+  background-color: beige;
+  background-image: url(../Img/img-fondo.webp);
+  background-attachment: fixed; }
+
+header .Logo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin: 50px;
+  border-style: double;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine; }
+  header .Logo h1 {
+    /*Estilo titulo de cabecera*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    font-style: italic;
+    text-align: justify;
+    color: black; }
+
+header .VOLVER {
+  /*seccion navegable*/
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 50px;
+  border-style: groove;
+  border-color: #6f47ff;
+  background-color: bisque;
+  justify-content: center; }
+  header .VOLVER nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-weight: bolder;
+    font-size: 20px; }
+  header .VOLVER nav ul a:hover {
+    background: greenyellow;
+    color: blue;
+    text-decoration: wavy;
+    cursor: pointer; }
+
+/*MAIN*/
+main {
+  margin: 50px; }
+  main .Nuestro-sueño {
+    height: 40vh;
+    display: grid;
+    grid-template-areas: "nuestro-sueño-titulo" "nuestro-sueño-parrafo-1" "nuestro-sueño-parrafo-2" "nuestro-sueño-parrafo-3" "nuestro-sueño-imagen";
+    grid-template-columns: 1fr;
+    /*con esto le doy ancho a las columnas*/
+    grid-template-rows: 20% repeat(3, 10%) 0.2fr;
+    /*con esto le doy alto a las filas*/
+    row-gap: 1%;
+    justify-content: center;
+    align-items: center; }
+    main .Nuestro-sueño h2 {
+      grid-area: nuestro-sueño-titulo;
+      font-style: oblique;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 200%;
+      font-weight: 700;
+      /*grosor de la letra*/ }
+    main .Nuestro-sueño .parrafo {
+      /*con esta doble clase hago que todos los párrafos tengan el mismo estilo, sin pisar lo que ocupan del área*/
+      font-style: oblique;
+      text-align: center;
+      font-weight: bold; }
+    main .Nuestro-sueño .parrafo-1 {
+      grid-area: nuestro-sueño-parrafo-1; }
+    main .Nuestro-sueño .parrafo-2 {
+      grid-area: nuestro-sueño-parrafo-2; }
+    main .Nuestro-sueño .parrafo-3 {
+      grid-area: nuestro-sueño-parrafo-3; }
+    main .Nuestro-sueño img {
+      grid-area: nuestro-sueño-imagen;
+      border-width: 30px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+/*PAGINA PRODUCTOS*/
+main h3 {
+  /*estilo para el "Cómprame"*/
+  font-size: 200%;
+  font-style: oblique;
+  color: yellowgreen;
+  text-align: center;
+  background-color: darkgreen; }
+
+main div .carousel-inner h5 {
+  color: black;
+  font-size: 70px;
+  font-weight: 500;
+  background-color: aquamarine; }
+
+/*para todas las paginas en construcción*/
+.construcción {
+  background-color: deeppink; }
+
+.Redes {
+  text-align: center; }
+
+.Volver-arriba {
+  text-align: right;
+  margin-right: 20px; }
+
+footer {
+  background-color: #d4b1f4; }

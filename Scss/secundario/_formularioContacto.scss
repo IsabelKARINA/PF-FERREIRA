@@ -1,0 +1,26 @@
+/*PAGINA CONTACTO*/
+form {  
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+        ul li{
+            list-style: none;
+            display: flex;
+            margin: 10px;
+            gap:10px;
+                textarea{
+                    width: 500px;
+                    height: 100px;
+                    resize: none;
+                }
+        }
+}
+.Datos{
+    background-color:antiquewhite ;
+   
+}
+
+.Boton-Enviar{
+    @extend %boton;
+}

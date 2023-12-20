@@ -1,0 +1,19 @@
+//mixin sin parametros
+
+@mixin flex{
+ display: flex;
+ flex-wrap:wrap;
+
+}
+
+@mixin texto{
+    font-style: oblique;
+    text-align: center;
+}
+
+//mixin con parametros
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
