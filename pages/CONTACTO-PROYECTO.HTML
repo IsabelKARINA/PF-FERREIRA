@@ -19,7 +19,9 @@
        <!--LOGO DE LA PAGINA-->
        <section class="Logo">
            
-           <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+        <a href="../index.html">
+            <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+        </a>
        
            <!-- TITULO PRINCIPAL DE LA PAGINA-->
            <h1>CREACIONES EN CROCHET</h1>
@@ -35,20 +37,15 @@
                        <!-- ENLACES ABSOLUTOS "a"-->
                        <a href="../index.html">HOME</a> <!--LINK PARA PAGINA PRINCIPAL-->
                    </li>
-                    <li>
-                        <a href="../pages/PRODUCTOS-PROYECTO.HTML">PRODUCTOS</a><!-- LINK PARA PAGINA DE PRODUCTOS-->
-                    </li> 
+                   <li>
+                    <a href="../pages/PRODUCTOS-V2-BORRADOR.HTML">PRODUCTOS</a><!--LINK PARA PAGINA DE PRODUCTOS CON BOOTSTRAP-->
+                    </li>
                     <li>
                         <a href="../pages/VIDEOS-PROYECTO.HTML">VIDEOS</a><!--LINK PARA PAGINA DE VIDEOS-->
                     </li>
                     <li>
                         <a href="../pages/TUTORIALES-PROYECTO.HTML">TUTORIALES</a><!--LINK PARA PAGINA DE TUTORIALES-->
-                    </li>
-                    <!--
-                    <li>
-                        <a href="../pages/CONTACTO-PROYECTO.HTML">CONTACTO</a>LINK PARA PAGINA DE CONTACTO
-                    </li>
-                    -->    
+                    </li>   
                </ul>
            </nav>
        </section>
@@ -56,13 +53,10 @@
 
    <!-- etiqueta para el contenido principal -->
    <main>
-       <!--
-        <br>
-            <p class="construcción"> ESTAMOS EN CONSTRUCCIÓN, SEPA DISCULPAR LAS MOLESTIAS</p>
-        </br>
-        <img src="../Img/martillo-en-construccion.gif" alt="Estamos en construcción" width="100">
-       -->
-
+    <h2 class="texto-comentario">
+        DEJANOS TU COMENTARIO!
+    </h2>
+ 
        <!--Formulario para completar "EN CONSTRUCCION"-->
        <form action="FORM.PHP" method="post" accept-charset="UTF-8">
             <fieldset class="Datos">
@@ -77,8 +71,6 @@
                             <input type= "number" name="number" placeholder="Por Ej.+54 111253456"></input>
                         </li>
                         <li>
-                           <!-- <label>Comentario</label>
-                            <input type="text" name="Comentario" placeholder="Por Ej. Hola! "></input> -->
                             <textarea name="Comentario" id="" cols="20" rows="10">Comentario...</textarea>
                         </li>
                     </ul>

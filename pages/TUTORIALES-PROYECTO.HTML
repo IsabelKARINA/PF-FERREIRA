@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-  <!-- LINK PARA LA HOJA DE CSS PARA LOS ESTILOS-->
-  <link rel="stylesheet" href="../Css/styles.css">
+<!-- link para @keyframe-animaciones de css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-  <title>Proyecto CROCHET-Videos</title> <!-- TITULO DEL PROYECTO, VA EN LA PESTAÑA DEL NAVEGADOR--> 
+<!-- LINK PARA LA HOJA DE CSS PARA LOS ESTILOS-->
+<link rel="stylesheet" href="../Css/styles.css">
+
+<title>Proyecto CROCHET-Videos</title> <!-- TITULO DEL PROYECTO, VA EN LA PESTAÑA DEL NAVEGADOR--> 
 
 </head>
 
@@ -19,7 +22,9 @@
        <!--LOGO DE LA PAGINA-->
        <section class="Logo">
            
-           <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+        <a href="../index.html">
+            <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+        </a>
        
            <!-- TITULO PRINCIPAL DE LA PAGINA-->
            <h1>CREACIONES EN CROCHET</h1>
@@ -35,18 +40,12 @@
                        <!-- ENLACES ABSOLUTOS "a"-->
                        <a href="../index.html">HOME</a> <!--LINK PARA PAGINA PRINCIPAL-->
                    </li>
-                    <li>
-                        <a href="../pages/PRODUCTOS-PROYECTO.HTML">PRODUCTOS</a><!-- LINK PARA PAGINA DE PRODUCTOS-->
-                    </li> 
-                
+                   <li>
+                    <a href="../pages/PRODUCTOS-V2-BORRADOR.HTML">PRODUCTOS</a><!--LINK PARA PAGINA DE PRODUCTOS CON BOOTSTRAP-->
+                    </li>
                     <li>
                         <a href="../pages/VIDEOS-PROYECTO.HTML">VIDEOS</a><!--LINK PARA PAGINA DE VIDEOS-->
                     </li>
-                    <!--
-                    <li>
-                        <a href="../pages/TUTORIALES-PROYECTO.HTML">TUTORIALES</a>LINK PARA PAGINA DE TUTORIALES
-                    </li>
-                    -->
                     <li>
                         <a href="../pages/CONTACTO-PROYECTO.HTML">CONTACTO</a><!--LINK PARA PAGINA DE CONTACTO-->
                      </li>
@@ -57,11 +56,24 @@
 
    <!-- etiqueta para el contenido principal -->
    <main>
-       <br>
-           <p class="construcción"> ESTAMOS EN CONSTRUCCIÓN, SEPA DISCULPAR LAS MOLESTIAS</p>
-       </br>
-       <img src="../Img/martillo-en-construccion.gif" alt="Estamos en construcción" width="100">
+    <h4 class="CLICK-AQUI animate__animated animate__shakeY animate__delay-0s animate__repeat-10">
+        Hace click sobre la imagen para empezar a tejer!
+    </h4>
+    <section class="Tutoriales">
+        <a href="https://crochetconalma.com/top-a-crochet-para-mujer/" target="_blank">
+            <img src="../Img/Img-Musculosa-tutorial.png" alt="Musculosa-tutorial-crochet">
+        </a>
+        <a href="https://www.detodocrochet.com/2021/09/hermosa-blusa-tejida-crochet-con.html" target="_blank">
+            <img src="../Img/Img-Blusa-Tutorial.png" alt="Blusa-Tutorial">
+        </a>
 
+    </section>
+       <section class="en-construccion">
+        <br>
+            <p class="construcción"> SEGUIMOS CONSTRUYENDO PARA VOS, DISCULPA  LAS MOLESTIAS</p>
+        </br>
+        <img class="martillo" src="../Img/martillo-en-construccion.gif" alt="Estamos en construcción" width="100">
+    </section>
    </main>
 
    <!--PIE DE PAGINA-->

@@ -1,7 +1,106 @@
-/*mq de tablet*/
+/*mq de celu*/
+@import "secundario/variables";
+
+
 @media screen and (min-width: 320px){
     header{
-        background-color:aquamarine;  
+         
+        background: linear-gradient(#60c558,#d1e1b9);
+        flex-direction: row;
+       
+        .Logo{
+            border-style: dashed;
+            background-image: url(../Img/img-oveja-header.jpg);
+           
+            h1{
+                font-weight: bolder; 
+            }        
+        }
+        .VOLVER{
+           background-color: bisque;
+           
+        }
+        .navbar-toggler{
+            color:#5c7365;
+            border:100px;
+            background-color: #AFC8AD;      
+           
+        }
+        .collapse navbar-collapse{
+            border:100px;
+        }
+        
+        .navbar{
+            background-color: bisque;
+            background: linear-gradient(#c1db9b,bisque);           
+        }
+       
+    }    
+    main{
+        .Nuestro-sueño{
+            row-gap: 5%;
+            font-size: 130%;
+    
+            .parrafo{
+                font-size: $medida-1;
+            }
+            img{
+                grid-row:span 2; 
+                object-fit: cover; 
+            }
+        }
+        .carousel-inner {
+            .carousel-item{
+                
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    
+                }
+            } 
+        }
+        .Datos{
+           min-inline-size: 25%;
+           ul li input{
+            max-inline-size: 50%;
+           }
+          
+        }
+        .CLICK-AQUI{
+            font-size: 20px;
+            width: $medida-1;
+            height: 75%;
+        }
+        .Tutoriales{
+            text-align:center;
+               a img{
+                    width: 50%;
+            }
+        }
+    
+       
+    }
+    footer{
+        margin-bottom: 0.5rem;
+        background: linear-gradient(bisque,#b0277c);
+        .Redes{
+            text-align:center;
+            img{
+                max-width: 15%;
+                max-height: 15%;
+                
+            }
+        }
+
+        
+    }
+}   
+
+
+/*mq de tablet*/
+@media screen and (min-width:600px) and (max-width: 1023px){
+    header{
+        background-color:#FFEBD8;  
         flex-direction: row;
     
         .Logo{
@@ -10,49 +109,197 @@
             color: blue;
         
             h1{
-                color:rgb(13, 10, 12);
-                font-size: 4rem;
+                font-size: 200%;
+                font-weight: bolder;
+            }
+        }
+        .VOLVER{
+            padding: 5px;
+            background-color: #AAD9BB;
+            
+        }
+    }
+   
+    main {
+        .Nuestro-sueño{
+            row-gap: 5%;
+            font-size: 130%;
+   
+            .parrafo{
+                font-size: $medida-1;
+            }
+            img{
+                display:none;
+            }
+        }
+        .carousel-inner {
+            .carousel-item{
+                
+                img{
+                    max-width: 50%;
+                    max-height: 50%;
+                    
+                }
+            } 
+        }
+        .CLICK-AQUI{
+            font-size: 25px;
+            width: $medida-1;
+            height: 100%;
+        }
+        .Tutoriales{
+            text-align:center;
+               a img{
+                    width: 50%;
             }
         }
     }
-    main .Nuestro-sueño{
-        row-gap: 5%;
-        font-size: 130%;
-    
-        .parrafo{
-            font-size: 100%;
+
+    footer {
+       
+         .Redes {
+            text-align: center;
+           img {
+                max-width:10%;
+                max-height: 10%;
+            }
+            
         }
-        img{
-            grid-row:span 2; 
-            object-fit: cover; 
-         }
     }
-    footer{
-        margin-bottom: 0.5rem;
-    }
+        
+    
 }
 
 /*mq de DESKTOP*/
 @media screen and (min-width: 1024px){
-    header{
-        background-color:rgb(222, 145, 207);  
-        flex-direction: row;
-    }
-
-    main{
-        grid-template-columns: 1fr;
-        grid-template-rows:2rem 5rem;
-        row-gap: 10%;
     
-        .Nuestro-sueño{
-            font-size: 150%;
-            .parrafo{
-                font-size: 150%;
+    header{
+        background: linear-gradient(#519a4b,bisque);
+     
+        flex-direction: row;
+        margin:auto;
+        .Logo{
+            border-style: dashed;
+            background-image: url(../Img/img-oveja-header.jpg);
+            color: blue;
+        
+            h1{
+                font-size: 300%;
+        
             }
-        img{
-            grid-row:span 2;
-            object-fit: cover; 
-            }
+        }
+        .VOLVER{
+            padding: 5px;
+            background-color: rgb(237, 220, 244);
+            
         }
     }
 }
+
+    main{
+        .Nuestro-sueño{
+            font-size: $medida-1;
+            grid-row-start: span 1;
+            .parrafo{
+                font-size: 150%;
+            }
+                       
+        img{
+           grid-row:span 1;
+            grid-column-start: 0.5fr;
+            object-fit: cover;          
+            }
+        }
+        .COMPRAME{
+            width: $medida-1;
+            height: 100%;
+        }
+        .CLICK-AQUI{
+            font-size: 30px;
+            width: $medida-1;
+            height: 100%;
+        }
+        .Tutoriales{
+            text-align: center;
+            img{
+                width: 25%;
+
+            }
+        }
+        .carousel-indicators{
+            top: 0%;
+            .active{
+            background-color:black;
+            
+            }
+        }
+        .carousel-inner {
+            .carousel-item{
+                
+                img{
+                    max-width: 25%;
+                    max-height: 25%;
+                    
+                }
+                .d-block{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    
+            
+                }
+            }
+            .carousel-caption{
+                h5{
+                   position:absolute;
+                   color: black;
+                   font-size: 25px;
+                   font-weight: 500;
+                   background-color: rgb(224, 178, 238);
+                   left: 0%;
+                }
+                p{
+                    color: rgb(120, 116, 116);
+                    font-size: 25px;
+                    font-weight: 500;
+                    text-shadow: 1px 1px #d9caaa;
+                    -webkit-text-stroke-color: black;
+                    -webkit-text-stroke-width: 2 px;
+                    position:absolute;
+                    right: 0%;
+                }
+            }
+    
+        }
+     
+    }   
+    
+
+    footer{
+      
+        margin-bottom: auto;
+        background-color:#FFF7D4;
+        .col {   
+        
+            a img{
+                width: 5%;
+                height: 5%;
+            
+            }
+        }
+        .Redes{   
+        
+            img{
+                width: 5%;
+                height: 5%;
+            
+            }
+        }
+        .container{
+            
+            width: 100%;
+            
+            
+        }
+    }
+    

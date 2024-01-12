@@ -14,12 +14,14 @@
 <body class="FONDO">
 
     <!-- CABECERA--><!-- para contener a lo que es el banner principal header-->
-    <header> 
+    <header > 
 
         <!--LOGO DE LA PAGINA-->
         <section class="Logo">
             
-            <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+            <a href="../index.html">
+                <img src="../Img/logo-ovillo-lana.png" alt="Logo de Proyecto CROCHET" width="150" height="150">
+            </a>
         
             <!-- TITULO PRINCIPAL DE LA PAGINA-->
             <h1>CREACIONES EN CROCHET</h1>
@@ -36,13 +38,9 @@
                         <a href="../index.html">HOME</a> <!--LINK PARA PAGINA PRINCIPAL-->
                     </li>
                     <li>
-                        <a href="../pages/PRODUCTOS-PROYECTO.HTML">PRODUCTOS</a><!-- LINK PARA PAGINA DE PRODUCTOS-->
-                    </li> 
-                    <!--
-                    <li>
-                        <a href="../pages/VIDEOS-PROYECTO.HTML">VIDEOS</a>LINK PARA PAGINA DE VIDEOS
-                    </li>
-                    -->
+                        <a href="../pages/PRODUCTOS-V2-BORRADOR.HTML">PRODUCTOS</a><!--LINK PARA PAGINA DE PRODUCTOS CON BOOTSTRAP-->
+                        </li>
+
                     <li>
                         <a href="../pages/TUTORIALES-PROYECTO.HTML">TUTORIALES</a><!--LINK PARA PAGINA DE TUTORIALES-->
                     </li>
@@ -56,15 +54,27 @@
 
     <!-- etiqueta para el contenido principal -->
     <main>
-        <br>
-            <p class="construcción"> ESTAMOS EN CONSTRUCCIÓN, SEPA DISCULPAR LAS MOLESTIAS</p>
-        </br>
-        <img src="../Img/martillo-en-construccion.gif" alt="Estamos en construcción" width="100">
-        <section>
-            <video width="320" height="240" controls
-            src="https://youtu.be/8cqQ1lKYTYw?si=tZahoi8SGlA2lI2u">
-            Video punto calado
-            </video>
+        <h2 class="texto-video">
+            ELEGÍ TU VIDEO Y SEGUÍ LOS PASOS DE ESTAS GRANDES TEJEDORAS QUE INSPIRAN
+        </h2>    
+        <section class="videos">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/chGZys-h6bU?si=I1m44knjgkAtIW59" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/Y0wH4EmHO30?si=_gLZkXhx6u98T6GZ" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        </section>
+        <section class="en-construccion">
+            <br>
+                <p class="construcción"> SEGUIMOS CONSTRUYENDO PARA VOS, DISCULPA LAS MOLESTIAS</p>
+                <img class="martillo" src="../Img/martillo-en-construccion.gif" alt="Estamos en construcción" width="100">
+            </br>
         </section>
     </main>
 

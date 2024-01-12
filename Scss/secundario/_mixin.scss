@@ -10,7 +10,11 @@
     font-style: oblique;
     text-align: center;
 }
+@mixin texto-2{
+@include texto;
+background: linear-gradient(#d1e1b9,#a8417f);
 
+}
 //mixin con parametros
 
 @mixin pad-marg($padding, $margin){

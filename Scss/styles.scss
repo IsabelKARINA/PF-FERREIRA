@@ -1,7 +1,3 @@
-//comentario en sass
-/*comentario en Sass y Css*/
-//nesting
-
 @import "secundario/mediaquery";
 @import "secundario/mixin.scss";
 @import "secundario/formularioContacto";
@@ -15,28 +11,32 @@
 
 /*BODY*/
 .FONDO {
-    background-color:beige;
+    background-color:#D9EDBF;
     background-image:url(../Img/img-fondo.webp);
     background-attachment: fixed;
+    border: 10px solid blue;
 }   
 
-header{
+header{    
         .Logo{     
             @include flex;
             @include pad-marg(30px, 50px);
             border-style: double;
             justify-content: center; 
             align-items: center;
-            background-color:aquamarine;                   
+            background-color:#D9EDbf;                   
            
             h1{
                 /*Estilo titulo de cabecera*/ 
                     font-family: Arial, Helvetica, sans-serif;
-                    font-size: 200%;
+                   
                     font-style:italic;
                     text-align: justify;
-                    color:black;
-                
+                    color:#FFB996;
+                    text-shadow:2px 2px #AAD9BB;
+                    -webkit-text-stroke-color: black;
+                    -webkit-text-stroke-width: 2px;
+                    
             }
         }
     .VOLVER{ 
@@ -45,7 +45,6 @@ header{
         @include pad-marg(10px, 50px);
         border-style: groove;
         border-color: rgb(111, 71, 255);
-        background-color: bisque;
         justify-content: center;
         
        nav ul{
@@ -68,16 +67,15 @@ main{
     margin: 50px;
 
     .Nuestro-sueño{  
-        height: 40vh;
         display: grid;
-        grid-template-areas: /*con esta propiedad defino el área en donde estarán los elementos*/
-        "nuestro-sueño-titulo" /*todas son de una fila*/
+        grid-template-areas: 
+        "nuestro-sueño-titulo"
         "nuestro-sueño-parrafo-1"
         "nuestro-sueño-parrafo-2"
         "nuestro-sueño-parrafo-3"
         "nuestro-sueño-imagen";        ;
-        grid-template-columns: 1fr; /*con esto le doy ancho a las columnas*/
-        grid-template-rows: 20% repeat(3,10%) 0.2fr; /*con esto le doy alto a las filas*/
+        grid-template-columns: 1fr;     
+        grid-auto-rows:75px;
         row-gap: 1%;
         justify-content: center;
         align-items: center;    
@@ -86,10 +84,10 @@ main{
                 @include texto;  
                 text-decoration: underline; 
                 font-size: 200%;
-                font-weight: 700; /*grosor de la letra*/   
+                font-weight: 700; 
             }
 
-           .parrafo{ /*con esta doble clase hago que todos los párrafos tengan el mismo estilo, sin pisar lo que ocupan del área*/
+           .parrafo{ 
                 @include texto;   
                 font-weight: bold;
             }
@@ -106,52 +104,58 @@ main{
             img{
                 grid-area: nuestro-sueño-imagen;
                 border-width: 30px;
-                width: $medida-1;
+                width: $medida-1 ;
                 height: $medida-1;
+             
                 object-fit: cover;
+        }
+    } 
+    .texto-video,.texto-comentario{
+        @include texto-2;
+    } 
+   
+    /*PAGINA PRODUCTOS*/
+    h3{ 
+        font-style: oblique;
+        color: yellowgreen;
+        text-align: center;
+        background-color:darkgreen;    
+    }  
+    h4{
+        @include texto;
+        color: black;
+        background: linear-gradient(#d1e1b9,#a8417f);
+    }
+    .videos{
+        text-align: center;
+       
+    }
+    .en-construccion{
+        text-align: center;
+    }
+    .videos{
+        iframe{
+            width: auto;
+            height: auto;
+        }
+       }
+}
+
+footer{
+    .col {
+        text-align:center;
     }
 }
-
-
-
-
-  
-    
-}
-
-/*PAGINA PRODUCTOS*/
-main h3{ /*estilo para el "Cómprame"*/
-    font-size: $medida-2;
-    font-style: oblique;
-    color: yellowgreen;
-    text-align: center;
-    background-color:darkgreen;
-  
-
-}
-main div .carousel-inner h5{
-    color:black;
-    font-size: 70px;
-    font-weight: 500;
-    background-color: aquamarine;
-}
-
 /*para todas las paginas en construcción*/
 .construcción{
     background-color: deeppink;
-}
-.Redes{
-    text-align:center;
+    text-align: center;
+    
 }
 
+
 .Volver-arriba{
-    text-align: right;
-    margin-right: 20px;
+    text-align: left;
+    margin-right: 0px;
       
-}
-footer {    
-        
-    background-color: rgb(212, 177, 244);
-    
-    
 }

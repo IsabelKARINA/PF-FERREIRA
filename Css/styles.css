@@ -1,17 +1,25 @@
 @charset "UTF-8";
-/*comentario en Sass y Css*/
-/*mq de tablet*/
+/*mq de celu*/
 @media screen and (min-width: 320px) {
   header {
-    background-color: aquamarine;
+    background: linear-gradient(#60c558, #d1e1b9);
     flex-direction: row; }
     header .Logo {
       border-style: dashed;
-      background-image: url(../Img/img-oveja-header.jpg);
-      color: blue; }
+      background-image: url(../Img/img-oveja-header.jpg); }
       header .Logo h1 {
-        color: #0d0a0c;
-        font-size: 4rem; }
+        font-weight: bolder; }
+    header .VOLVER {
+      background-color: bisque; }
+    header .navbar-toggler {
+      color: #5c7365;
+      border: 100px;
+      background-color: #AFC8AD; }
+    header .collapse navbar-collapse {
+      border: 100px; }
+    header .navbar {
+      background-color: bisque;
+      background: linear-gradient(#c1db9b, bisque); }
   main .Nuestro-sueño {
     row-gap: 5%;
     font-size: 130%; }
@@ -20,25 +28,152 @@
     main .Nuestro-sueño img {
       grid-row: span 2;
       object-fit: cover; }
+  main .carousel-inner .carousel-item img {
+    max-width: 100%;
+    max-height: 100%; }
+  main .Datos {
+    min-inline-size: 25%; }
+    main .Datos ul li input {
+      max-inline-size: 50%; }
+  main .CLICK-AQUI {
+    font-size: 20px;
+    width: 100%;
+    height: 75%; }
+  main .Tutoriales {
+    text-align: center; }
+    main .Tutoriales a img {
+      width: 50%; }
   footer {
-    margin-bottom: 0.5rem; } }
+    margin-bottom: 0.5rem;
+    background: linear-gradient(bisque, #b0277c); }
+    footer .Redes {
+      text-align: center; }
+      footer .Redes img {
+        max-width: 15%;
+        max-height: 15%; } }
+
+/*mq de tablet*/
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  header {
+    background-color: #FFEBD8;
+    flex-direction: row; }
+    header .Logo {
+      border-style: dashed;
+      background-image: url(../Img/img-oveja-header.jpg);
+      color: blue; }
+      header .Logo h1 {
+        font-size: 200%;
+        font-weight: bolder; }
+    header .VOLVER {
+      padding: 5px;
+      background-color: #AAD9BB; }
+  main .Nuestro-sueño {
+    row-gap: 5%;
+    font-size: 130%; }
+    main .Nuestro-sueño .parrafo {
+      font-size: 100%; }
+    main .Nuestro-sueño img {
+      display: none; }
+  main .carousel-inner .carousel-item img {
+    max-width: 50%;
+    max-height: 50%; }
+  main .CLICK-AQUI {
+    font-size: 25px;
+    width: 100%;
+    height: 100%; }
+  main .Tutoriales {
+    text-align: center; }
+    main .Tutoriales a img {
+      width: 50%; }
+  footer .Redes {
+    text-align: center; }
+    footer .Redes img {
+      max-width: 10%;
+      max-height: 10%; } }
 
 /*mq de DESKTOP*/
 @media screen and (min-width: 1024px) {
   header {
-    background-color: #de91cf;
-    flex-direction: row; }
-  main {
-    grid-template-columns: 1fr;
-    grid-template-rows: 2rem 5rem;
-    row-gap: 10%; }
-    main .Nuestro-sueño {
-      font-size: 150%; }
-      main .Nuestro-sueño .parrafo {
-        font-size: 150%; }
-      main .Nuestro-sueño img {
-        grid-row: span 2;
-        object-fit: cover; } }
+    background: linear-gradient(#519a4b, bisque);
+    flex-direction: row;
+    margin: auto; }
+    header .Logo {
+      border-style: dashed;
+      background-image: url(../Img/img-oveja-header.jpg);
+      color: blue; }
+      header .Logo h1 {
+        font-size: 300%; }
+    header .VOLVER {
+      padding: 5px;
+      background-color: #eddcf4; } }
+
+main .Nuestro-sueño {
+  font-size: 100%;
+  grid-row-start: span 1; }
+  main .Nuestro-sueño .parrafo {
+    font-size: 150%; }
+  main .Nuestro-sueño img {
+    grid-row: span 1;
+    grid-column-start: 0.5fr;
+    object-fit: cover; }
+
+main .COMPRAME {
+  width: 100%;
+  height: 100%; }
+
+main .CLICK-AQUI {
+  font-size: 30px;
+  width: 100%;
+  height: 100%; }
+
+main .Tutoriales {
+  text-align: center; }
+  main .Tutoriales img {
+    width: 25%; }
+
+main .carousel-indicators {
+  top: 0%; }
+  main .carousel-indicators .active {
+    background-color: black; }
+
+main .carousel-inner .carousel-item img {
+  max-width: 25%;
+  max-height: 25%; }
+
+main .carousel-inner .carousel-item .d-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+main .carousel-inner .carousel-caption h5 {
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: #e0b2ee;
+  left: 0%; }
+
+main .carousel-inner .carousel-caption p {
+  color: #787474;
+  font-size: 25px;
+  font-weight: 500;
+  text-shadow: 1px 1px #d9caaa;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2 px;
+  position: absolute;
+  right: 0%; }
+
+footer {
+  margin-bottom: auto;
+  background-color: #FFF7D4; }
+  footer .col a img {
+    width: 5%;
+    height: 5%; }
+  footer .Redes img {
+    width: 5%;
+    height: 5%; }
+  footer .container {
+    width: 100%; }
 
 /*PAGINA CONTACTO*/
 form {
@@ -73,9 +208,10 @@ form {
 
 /*BODY*/
 .FONDO {
-  background-color: beige;
+  background-color: #D9EDBF;
   background-image: url(../Img/img-fondo.webp);
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  border: 10px solid blue; }
 
 header .Logo {
   display: flex;
@@ -85,14 +221,16 @@ header .Logo {
   border-style: double;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine; }
+  background-color: #D9EDbf; }
   header .Logo h1 {
     /*Estilo titulo de cabecera*/
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
     font-style: italic;
     text-align: justify;
-    color: black; }
+    color: #FFB996;
+    text-shadow: 2px 2px #AAD9BB;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px; }
 
 header .VOLVER {
   /*seccion navegable*/
@@ -102,7 +240,6 @@ header .VOLVER {
   margin: 50px;
   border-style: groove;
   border-color: #6f47ff;
-  background-color: bisque;
   justify-content: center; }
   header .VOLVER nav ul {
     list-style: none;
@@ -119,15 +256,13 @@ header .VOLVER {
 
 /*MAIN*/
 main {
-  margin: 50px; }
+  margin: 50px;
+  /*PAGINA PRODUCTOS*/ }
   main .Nuestro-sueño {
-    height: 40vh;
     display: grid;
-    grid-template-areas: "nuestro-sueño-titulo" "nuestro-sueño-parrafo-1" "nuestro-sueño-parrafo-2" "nuestro-sueño-parrafo-3" "nuestro-sueño-imagen";
+    grid-template-areas: "nuestro-sueño-titulo" "nuestro-sueño-parrafo-1" "nuestro-sueño-parrafo-2" "nuestro-sueño-parrafo-3" "nuestro-sueño-imagen";
     grid-template-columns: 1fr;
-    /*con esto le doy ancho a las columnas*/
-    grid-template-rows: 20% repeat(3, 10%) 0.2fr;
-    /*con esto le doy alto a las filas*/
+    grid-auto-rows: 75px;
     row-gap: 1%;
     justify-content: center;
     align-items: center; }
@@ -137,10 +272,8 @@ main {
       text-align: center;
       text-decoration: underline;
       font-size: 200%;
-      font-weight: 700;
-      /*grosor de la letra*/ }
+      font-weight: 700; }
     main .Nuestro-sueño .parrafo {
-      /*con esta doble clase hago que todos los párrafos tengan el mismo estilo, sin pisar lo que ocupan del área*/
       font-style: oblique;
       text-align: center;
       font-weight: bold; }
@@ -156,32 +289,36 @@ main {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  main .texto-video, main .texto-comentario {
+    font-style: oblique;
+    text-align: center;
+    background: linear-gradient(#d1e1b9, #a8417f); }
+  main h3 {
+    font-style: oblique;
+    color: yellowgreen;
+    text-align: center;
+    background-color: darkgreen; }
+  main h4 {
+    font-style: oblique;
+    text-align: center;
+    color: black;
+    background: linear-gradient(#d1e1b9, #a8417f); }
+  main .videos {
+    text-align: center; }
+  main .en-construccion {
+    text-align: center; }
+  main .videos iframe {
+    width: auto;
+    height: auto; }
 
-/*PAGINA PRODUCTOS*/
-main h3 {
-  /*estilo para el "Cómprame"*/
-  font-size: 200%;
-  font-style: oblique;
-  color: yellowgreen;
-  text-align: center;
-  background-color: darkgreen; }
-
-main div .carousel-inner h5 {
-  color: black;
-  font-size: 70px;
-  font-weight: 500;
-  background-color: aquamarine; }
+footer .col {
+  text-align: center; }
 
 /*para todas las paginas en construcción*/
 .construcción {
-  background-color: deeppink; }
-
-.Redes {
+  background-color: deeppink;
   text-align: center; }
 
 .Volver-arriba {
-  text-align: right;
-  margin-right: 20px; }
-
-footer {
-  background-color: #d4b1f4; }
+  text-align: left;
+  margin-right: 0px; }
